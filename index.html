@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latín 1 · Antología de textos comentados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --piedra:#ECE9E1;--piedra-honda:#E2DED4;--tinta:#23241E;--tinta-suave:#5A5B50;
+    --aerugo:#3F7A6E;--linea:#C9C4B6;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--piedra);color:var(--tinta);font-family:"Inter",system-ui,sans-serif;line-height:1.6;padding:clamp(2rem,6vw,5rem) 1.25rem 4rem}
+  .lamina{max-width:44rem;margin:0 auto}
+
+  .eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--aerugo);font-weight:600;margin:0 0 1.2rem}
+  .titulo{font-family:"Spectral",serif;font-weight:200;font-size:clamp(2.4rem,9vw,3.6rem);letter-spacing:.02em;line-height:1.05;margin:0 0 .6rem}
+  .intro{font-size:1rem;color:var(--tinta-suave);max-width:32rem;margin:0 0 3rem}
+
+  .regla{border:0;border-top:1px solid var(--linea);margin:0 0 .5rem}
+
+  /* lista de textos */
+  .indice{list-style:none;margin:0;padding:0}
+  .entrada{border-bottom:1px solid var(--linea)}
+  .enlace{
+    display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;
+    gap:0 1.4rem;padding:1.7rem .25rem;text-decoration:none;color:inherit;
+    transition:padding-left .2s ease;
+  }
+  .enlace:hover,.enlace:focus{padding-left:.9rem;outline:none}
+  .enlace:focus-visible{outline:2px solid var(--aerugo);outline-offset:4px;border-radius:3px}
+
+  .num{
+    font-family:"Spectral",serif;font-weight:200;font-size:2.2rem;line-height:1;
+    color:var(--linea);transition:color .2s ease;font-feature-settings:"lnum" 1;
+  }
+  .enlace:hover .num,.enlace:focus .num{color:var(--aerugo)}
+
+  .cuerpo{min-width:0}
+  .autor{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--aerugo);font-weight:600;margin:0 0 .25rem}
+  .obra{font-family:"Spectral",serif;font-weight:600;font-size:1.25rem;margin:0 0 .35rem;color:var(--tinta)}
+  .incipit{font-family:"Spectral",serif;font-style:italic;font-weight:400;font-size:1rem;color:var(--tinta-suave);margin:0}
+
+  .leer{font-size:.8rem;letter-spacing:.08em;color:var(--tinta-suave);white-space:nowrap;align-self:center}
+  .enlace:hover .leer,.enlace:focus .leer{color:var(--aerugo)}
+
+  footer{margin-top:3.2rem;font-size:.82rem;color:var(--tinta-suave)}
+
+  @media (max-width:30rem){
+    .enlace{grid-template-columns:auto 1fr;gap:.2rem 1rem}
+    .leer{grid-column:2;justify-self:start;margin-top:.5rem}
+    .num{font-size:1.8rem}
+  }
+</style>
+</head>
+<body>
+<main class="lamina">
+
+  <p class="eyebrow">Departamento · Latín 1</p>
+  <h1 class="titulo">Antología</h1>
+  <p class="intro">Textos latinos con análisis sintáctico y vocabulario. Pasa el ratón o toca cada palabra para ver su glosa; los colores marcan los constituyentes de la oración.</p>
+
+  <hr class="regla">
+  <ol class="indice">
+
+    <li class="entrada">
+      <a class="enlace" href="cesar.html">
+        <span class="num">01</span>
+        <span class="cuerpo">
+          <span class="autor">C. Iulius Caesar</span>
+          <span class="obra">De Bello Gallico, I, 1</span>
+          <span class="incipit">Gallia est omnis divisa in partes tres…</span>
+        </span>
+        <span class="leer">Leer →</span>
+      </a>
+    </li>
+
+    <li class="entrada">
+      <a class="enlace" href="fedro.html">
+        <span class="num">02</span>
+        <span class="cuerpo">
+          <span class="autor">Phaedrus</span>
+          <span class="obra">Vulpes et Uva (Fabulae, IV, 3)</span>
+          <span class="incipit">Fame coacta vulpes alta in vinea…</span>
+        </span>
+        <span class="leer">Leer →</span>
+      </a>
+    </li>
+
+  </ol>
+
+  <footer>Sitio de prueba · alojado en GitHub Pages</footer>
+
+</main>
+</body>
+</html>

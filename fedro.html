@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fedro, Vulpes et Uva — Texto, análisis y vocabulario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --piedra:#ECE9E1;
+    --piedra-honda:#E2DED4;
+    --tinta:#23241E;
+    --tinta-suave:#5A5B50;
+    --aerugo:#3F7A6E;
+    --siena:#B5651D;
+    --tirio:#7A5BA6;
+    --ocre:#9C6A3C;
+    --linea:#C9C4B6;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--piedra);color:var(--tinta);
+    font-family:"Inter",system-ui,sans-serif;line-height:1.6;
+    padding:clamp(1.5rem,4vw,4rem) 1.25rem 4rem;
+  }
+  .lamina{max-width:48rem;margin:0 auto}
+
+  .volver{
+    display:inline-block;font-size:.78rem;letter-spacing:.1em;
+    color:var(--tinta-suave);text-decoration:none;margin:0 0 2rem;
+  }
+  .volver:hover,.volver:focus{color:var(--aerugo)}
+
+  .eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--aerugo);font-weight:600;margin:0 0 1.1rem}
+  .titulo-epi{font-family:"Spectral",serif;font-weight:200;font-size:clamp(1.15rem,3.4vw,1.55rem);letter-spacing:.18em;line-height:1.4;color:var(--tinta);margin:0 0 .35rem}
+  .ref{font-size:.78rem;letter-spacing:.16em;color:var(--tinta-suave);text-transform:uppercase;margin:0 0 2.4rem}
+  .regla{border:0;border-top:1px solid var(--linea);margin:2.4rem 0}
+
+  .pasaje{font-family:"Spectral",serif;font-weight:400;font-size:clamp(1.25rem,4vw,1.7rem);line-height:1.95;color:var(--tinta);margin:0}
+  .verso{display:block}
+
+  .v{position:relative;cursor:help;border-bottom:1px dotted var(--linea)}
+  .v::after{content:attr(data-glosa);position:absolute;left:50%;bottom:140%;transform:translateX(-50%) translateY(.3rem);background:var(--tinta);color:var(--piedra);font-family:"Inter",sans-serif;font-size:.82rem;font-weight:400;letter-spacing:0;line-height:1.35;white-space:nowrap;padding:.4rem .65rem;border-radius:3px;opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;z-index:5}
+  .v::before{content:"";position:absolute;left:50%;bottom:140%;transform:translateX(-50%) translateY(.3rem);border:5px solid transparent;border-top-color:var(--tinta);opacity:0;transition:opacity .18s ease,transform .18s ease;z-index:5}
+  .v:hover::after,.v:focus::after,.v.activa::after{opacity:1;transform:translateX(-50%) translateY(0)}
+  .v:hover::before,.v:focus::before,.v.activa::before{opacity:1;transform:translateX(-50%) translateY(0)}
+  .v:focus{outline:2px solid var(--aerugo);outline-offset:2px;border-radius:2px}
+
+  .suj{border-bottom:2px solid var(--siena)}
+  .cop{border-bottom:2px solid var(--aerugo)}
+  .pred{border-bottom:2px solid var(--tirio)}
+  .comp{border-bottom:2px solid var(--ocre)}
+
+  .leyenda{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:1.8rem 0 0;font-size:.82rem;color:var(--tinta-suave)}
+  .leyenda span{display:inline-flex;align-items:center;gap:.45rem}
+  .pip{width:1.1rem;height:0;border-bottom-width:2px;border-bottom-style:solid;display:inline-block}
+
+  h2{font-family:"Inter",sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--aerugo);margin:0 0 1.1rem}
+  .analisis p{margin:0 0 .9rem;font-size:1rem;color:var(--tinta)}
+  .analisis em{font-family:"Spectral",serif;font-style:italic;font-weight:400}
+  .nota{font-size:.92rem;color:var(--tinta-suave)}
+
+  table{width:100%;border-collapse:collapse;font-size:.96rem}
+  th{text-align:left;font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);padding:0 0 .6rem;border-bottom:1px solid var(--linea)}
+  td{padding:.7rem 0;border-bottom:1px solid var(--piedra-honda);vertical-align:top}
+  td:first-child{font-family:"Spectral",serif;font-weight:600;white-space:nowrap;padding-right:1.2rem}
+  tr:last-child td{border-bottom:0}
+
+  footer{margin-top:3rem;font-size:.82rem;color:var(--tinta-suave);text-align:center}
+  @media (prefers-reduced-motion:reduce){.v::after,.v::before{transition:none}}
+</style>
+</head>
+<body>
+<main class="lamina">
+
+  <a class="volver" href="index.html">← Índice</a>
+
+  <p class="eyebrow">Texto · Análisis · Vocabulario</p>
+  <h1 class="titulo-epi">PHAEDRVS</h1>
+  <p class="ref">Fabulae · IV, 3 · Vulpes et Uva</p>
+
+  <p class="pasaje">
+    <span class="verso">
+      <span class="v comp" tabindex="0" data-glosa="fames, -is (f.): hambre — abl. de causa">Fame</span>
+      <span class="v comp" tabindex="0" data-glosa="cogo, -ere, coegi, coactum: obligar (part. pf. pas.)">coacta</span>
+      <span class="v suj" tabindex="0" data-glosa="vulpes, -is (f.): zorra, raposa">vulpes</span>
+      <span class="v comp" tabindex="0" data-glosa="altus, -a, -um: alto, elevado">alta</span>
+      <span class="v comp" tabindex="0" data-glosa="in + abl.: en">in</span>
+      <span class="v comp" tabindex="0" data-glosa="vinea, -ae (f.): viña, viñedo">vinea</span>
+    </span>
+    <span class="verso">
+      <span class="v comp" tabindex="0" data-glosa="uva, -ae (f.): uva, racimo">uvam</span>
+      <span class="v cop" tabindex="0" data-glosa="appeto, -ere: tratar de alcanzar, ansiar (imperf.)">appetebat</span>
+      <span class="v comp" tabindex="0" data-glosa="summus, -a, -um: el más alto, sumo">summis</span>
+      <span class="v cop" tabindex="0" data-glosa="salio, -ire: saltar (part. pres.)">saliens</span>
+      <span class="v comp" tabindex="0" data-glosa="vires, virium (f. pl.): fuerzas — abl. de modo">viribus</span>;
+    </span>
+    <span class="verso">
+      <span class="v comp" tabindex="0" data-glosa="qui, quae, quod: el cual (= uvam), C. D. de tangere">quam</span>
+      <span class="v comp" tabindex="0" data-glosa="tango, -ere: tocar, alcanzar (infinitivo)">tangere</span>
+      <span class="v cop" tabindex="0" data-glosa="ut (+ indic.): cuando, una vez que">ut</span>
+      <span class="v comp" tabindex="0" data-glosa="non: no">non</span>
+      <span class="v cop" tabindex="0" data-glosa="possum, posse, potui: poder (perf.)">potuit</span>,
+      <span class="v cop" tabindex="0" data-glosa="discedo, -ere: marcharse, alejarse (part. pres.)">discedens</span>
+      <span class="v cop" tabindex="0" data-glosa="aio (ait): decir, afirmar">ait</span>:
+    </span>
+    <span class="verso">
+      «<span class="v comp" tabindex="0" data-glosa="nondum (adv.): todavía no">Nondum</span>
+      <span class="v pred" tabindex="0" data-glosa="maturus, -a, -um: maduro">matura</span>
+      <span class="v cop" tabindex="0" data-glosa="sum, esse: ser, estar">est</span>;
+      <span class="v cop" tabindex="0" data-glosa="nolo, nolle: no querer, rehusar">nolo</span>
+      <span class="v comp" tabindex="0" data-glosa="acerbus, -a, -um: agrio, áspero, verde">acerbam</span>
+      <span class="v comp" tabindex="0" data-glosa="sumo, -ere: tomar, coger (infinitivo)">sumere</span>».
+    </span>
+  </p>
+
+  <div class="leyenda" aria-label="Leyenda de constituyentes">
+    <span><i class="pip" style="border-color:var(--siena)"></i> Sujeto</span>
+    <span><i class="pip" style="border-color:var(--aerugo)"></i> Núcleo verbal</span>
+    <span><i class="pip" style="border-color:var(--tirio)"></i> Atributo</span>
+    <span><i class="pip" style="border-color:var(--ocre)"></i> Complementos</span>
+  </div>
+
+  <hr class="regla">
+
+  <section class="analisis">
+    <h2>Análisis</h2>
+    <p>Cuatro senarios yámbicos. Una sola escena con dos oraciones principales (<em>appetebat</em>… <em>ait</em>) y el parlamento final de la zorra.</p>
+    <p><strong>vv. 1–2:</strong> el sujeto es <em>vulpes</em>; <em>fame coacta</em> es ablativo absoluto reducido (participio <em>coacta</em> concertando con <em>vulpes</em>, <em>fame</em> ablativo de causa): «forzada por el hambre». <em>Uvam</em> es C. D. de <em>appetebat</em>; <em>summis viribus</em>, ablativo de modo; <em>saliens</em>, participio de presente predicativo del sujeto.</p>
+    <p><strong>v. 3:</strong> <em>quam</em> (= <em>uvam</em>) es C. D. del infinitivo <em>tangere</em>, que a su vez depende de <em>potuit</em>. <em>Ut… potuit</em> es oración temporal con <em>ut</em> + indicativo: «cuando no pudo». <em>Discedens</em>, participio de presente; <em>ait</em>, verbo principal.</p>
+    <p><strong>v. 4:</strong> en <em>nondum matura est</em> el sujeto tácito es <em>uva</em> y <em>matura</em> es atributo. <em>Nolo</em> rige el infinitivo <em>sumere</em>, cuyo C. D. es <em>acerbam</em> (sobreentendido <em>uvam</em>).</p>
+    <p class="nota">El moral del epimitio (no recogido aquí) glosa el desdén interesado: se desprecia lo que no se alcanza.</p>
+  </section>
+
+  <hr class="regla">
+
+  <section>
+    <h2>Vocabulario</h2>
+    <table>
+      <thead><tr><th>Lema</th><th>Categoría y significado</th></tr></thead>
+      <tbody>
+        <tr><td>fames, -is</td><td>f. — hambre</td></tr>
+        <tr><td>cogo, -ere</td><td>v. tr. — reunir; obligar, forzar (coegi, coactum)</td></tr>
+        <tr><td>vulpes, -is</td><td>f. — zorra, raposa</td></tr>
+        <tr><td>altus, -a, -um</td><td>adj. — alto, elevado; profundo</td></tr>
+        <tr><td>vinea, -ae</td><td>f. — viña, viñedo</td></tr>
+        <tr><td>uva, -ae</td><td>f. — uva, racimo</td></tr>
+        <tr><td>appeto, -ere</td><td>v. tr. — dirigirse a; tratar de alcanzar, ansiar</td></tr>
+        <tr><td>summus, -a, -um</td><td>adj. — el más alto, sumo; la cima de</td></tr>
+        <tr><td>salio, -ire</td><td>v. intr. — saltar</td></tr>
+        <tr><td>vires, virium</td><td>f. pl. — fuerzas (de vis)</td></tr>
+        <tr><td>tango, -ere</td><td>v. tr. — tocar, alcanzar</td></tr>
+        <tr><td>possum, posse</td><td>v. irreg. — poder (potui)</td></tr>
+        <tr><td>discedo, -ere</td><td>v. intr. — separarse, marcharse</td></tr>
+        <tr><td>aio</td><td>v. def. — decir, afirmar (ait: dice/dijo)</td></tr>
+        <tr><td>maturus, -a, -um</td><td>adj. — maduro, sazonado</td></tr>
+        <tr><td>nolo, nolle</td><td>v. irreg. — no querer, rehusar</td></tr>
+        <tr><td>acerbus, -a, -um</td><td>adj. — agrio, áspero; verde, sin madurar</td></tr>
+        <tr><td>sumo, -ere</td><td>v. tr. — tomar, coger; asumir</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>Página de prueba · contenido editable en un solo archivo HTML</footer>
+
+</main>
+
+<script>
+  const palabras = document.querySelectorAll('.v');
+  palabras.forEach(p => {
+    p.addEventListener('click', e => {
+      const yaActiva = p.classList.contains('activa');
+      palabras.forEach(o => o.classList.remove('activa'));
+      if (!yaActiva) p.classList.add('activa');
+      e.stopPropagation();
+    });
+  });
+  document.addEventListener('click', () => palabras.forEach(o => o.classList.remove('activa')));
+</script>
+</body>
+</html>
